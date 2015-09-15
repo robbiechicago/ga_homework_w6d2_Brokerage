@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RoHoBrokers</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <ul>
+    <li><%= link_to('Clients', '/clients') %></li>
+    <li><%= link_to('Stocks', '/stocks') %></li>
+  </ul>
+</header>
+
+<%= yield %>
+
+</body>
+</html>

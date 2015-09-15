@@ -1,0 +1,10 @@
+<h1><%= @stocks.name %></h1>
+
+<p>Price = <%= @stocks.price %></p>
+<p>Owners:
+  <ul>
+    <% @stocks.client_stock.each do |obj| %>
+      <li><%= obj.client.name %></li>  
+    <% end %>
+  </ul>
+</p>

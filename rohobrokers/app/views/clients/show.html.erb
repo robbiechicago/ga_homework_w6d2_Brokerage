@@ -1,0 +1,18 @@
+<h1><%= @client.name %></h1>
+
+<table>
+  <tr>
+    <th>Stock</th>
+    <th>Price</th>
+    <th>Shares Held</th>
+    <th>Value</th>
+  </tr>
+  <% @client.client_stock.each do |obj| %>
+  <tr>
+    <td><%= obj.stock.name %></td>
+    <td><%= obj.stock.price %></td>
+    <td><%= obj.num_shares %></td>
+    <td><%= obj.stock.price.to_i * obj.num_shares.to_i %></td>
+  </tr>
+  <% end %>
+</table>
